@@ -4,11 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npx open-next build",
     "start": "next start",
     "lint": "next lint",
-    "pages:build": "npx @cloudflare/next-on-pages",
-    "deploy": "npm run pages:build && wrangler pages deploy .vercel/output/static",
+    "deploy": "npm run build && wrangler pages deploy .open-next/output",
     "db:init": "npx wrangler d1 execute engineering-studio-db --file=./db/schema.sql --local",
     "db:deploy": "npx wrangler d1 execute engineering-studio-db --file=./db/schema.sql",
     "r2:init": "npx wrangler r2 bucket create engineering-studio-r2",
@@ -37,7 +36,6 @@
     "zod": "^3.2.4"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "1.11.1",
     "@cloudflare/workers-types": "^4.20240512.0",
     "@types/node": "^20",
     "@types/react": "^18",
@@ -45,6 +43,7 @@
     "autoprefixer": "^10.4.19",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
+    "open-next": "^2.3.1",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "tailwindcss-animate": "^1.0.7",

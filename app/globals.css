@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+ 
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+ 
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+ 
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+ 
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+ 
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+ 
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+ 
+    --radius: 0.5rem;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.prose {
+  --tw-prose-body: theme(colors.gray[300]);
+  --tw-prose-headings: theme(colors.white);
+  --tw-prose-lead: theme(colors.gray[400]);
+  --tw-prose-links: theme(colors.white);
+  --tw-prose-bold: theme(colors.white);
+  --tw-prose-counters: theme(colors.gray[400]);
+  --tw-prose-bullets: theme(colors.gray[600]);
+  --tw-prose-hr: theme(colors.gray[700]);
+  --tw-prose-quotes: theme(colors.gray[200]);
+  --tw-prose-quote-borders: theme(colors.gray[700]);
+  --tw-prose-captions: theme(colors.gray[400]);
+  --tw-prose-code: theme(colors.white);
+  --tw-prose-pre-code: theme(colors.gray[300]);
+  --tw-prose-pre-bg: theme(colors.gray[900]);
+  --tw-prose-th-borders: theme(colors.gray[600]);
+  --tw-prose-td-borders: theme(colors.gray[700]);
+}
+

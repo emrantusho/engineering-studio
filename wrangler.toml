@@ -1,10 +1,8 @@
 name = "engineering-studio"
-main = ".open-next/worker-bundle/index.js"
-pages_build_output_dir = ".open-next/output/client"
 compatibility_date = "2024-04-05"
 
-[placement]
-mode = "smart"
+# NOTE: For Git-integrated Pages projects, the 'main' and 'pages_build_output_dir'
+# keys are not used here. They are configured in the Cloudflare Dashboard UI.
 
 [[r2_buckets]]
 binding = "R2_BUCKET"
